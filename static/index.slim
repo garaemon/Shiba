@@ -18,13 +18,30 @@ html
     link rel="import" href="paw-filechooser.html"
 
     link rel="stylesheet" href="../../bower_components/github-markdown-css/github-markdown.css"
-
-    style is="custom-style"
+    style
       |
         html, body {
           width: 100%;
           height: 100%;
+          margin: 0;
+          padding: 0;
+          overflow-x: hidden;
         }
+         #mainContainer {
+          overflow: visible !important;
+        }
+
+        paper-drawer-panel#main-drawer {
+        //overflow-x: hidden;
+        overflow: visible !important;
+        overflow-y: visible;
+        }
+        paper-drawer-panel {
+        overflow: visible !important;
+        }
+
+    style is="custom-style"
+      |
         #main-area {
           @apply(--layout-horizontal);
         }
@@ -44,7 +61,6 @@ html
         #current-html-preview {
           width: 100%;
         }
-
     base
   body
     paper-drawer-panel#main-drawer[drawer-width="320px" responsive-width="1120px" disable-swipe=true right-drawer]
